@@ -1,0 +1,642 @@
+[
+  {
+    "id": 9,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Baixa",
+    "cafe": "Cozy Cup of Baixa",
+    "visited": false,
+    "overall": "Fire",
+    "price": "Taxed"
+  },
+  {
+    "id": 10,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Baixa",
+    "cafe": "Cozy Cup of Baixa #72",
+    "visited": false,
+    "overall": "Fire",
+    "price": "Taxed"
+  },
+  {
+    "id": 11,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Baixa",
+    "cafe": "Cozy Cup of Baixa #10",
+    "visited": false,
+    "overall": "Fire",
+    "price": "Taxed"
+  },
+  {
+    "id": 12,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Baixa",
+    "cafe": "Cozy Cup of Baixa #51",
+    "visited": false,
+    "overall": "Fire",
+    "price": "Taxed"
+  },
+  {
+    "id": 13,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Baixa",
+    "cafe": "Cozy Cup of Baixa #84",
+    "visited": false,
+    "overall": "Fire",
+    "price": "Taxed"
+  },
+  {
+    "id": 14,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Baixa",
+    "cafe": "Cozy Cup of Baixa #27",
+    "visited": false,
+    "overall": "Fire",
+    "price": "Taxed"
+  },
+  {
+    "id": 15,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Baixa",
+    "cafe": "Cozy Cup of Baixa #87",
+    "visited": false,
+    "overall": "Fire",
+    "price": "Taxed"
+  },
+  {
+    "id": 16,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Baixa",
+    "cafe": "Cozy Cup of Baixa #22",
+    "visited": false,
+    "overall": "Fire",
+    "price": "Taxed"
+  },
+  {
+    "id": 17,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Baixa",
+    "cafe": "Cozy Cup of Baixa #87",
+    "visited": false,
+    "overall": "Fire",
+    "price": "Taxed"
+  },
+  {
+    "id": 21,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Alfama",
+    "cafe": "Rustic Mug of Alfama",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Chill"
+  },
+  {
+    "id": 22,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Alfama",
+    "cafe": "Rustic Mug of Alfama #96",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Chill"
+  },
+  {
+    "id": 23,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Alfama",
+    "cafe": "Rustic Mug of Alfama #4",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Chill"
+  },
+  {
+    "id": 24,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Alfama",
+    "cafe": "Rustic Mug of Alfama #75",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Chill"
+  },
+  {
+    "id": 30,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Bel\u00e9m",
+    "cafe": "Rustic Mug of Bel\u00e9m",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Chill"
+  },
+  {
+    "id": 31,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Bel\u00e9m",
+    "cafe": "Rustic Mug of Bel\u00e9m #87",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Chill"
+  },
+  {
+    "id": 32,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Bel\u00e9m",
+    "cafe": "Rustic Mug of Bel\u00e9m #41",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Chill"
+  },
+  {
+    "id": 33,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Bel\u00e9m",
+    "cafe": "Rustic Mug of Bel\u00e9m #61",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Chill"
+  },
+  {
+    "id": 34,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Bel\u00e9m",
+    "cafe": "Rustic Mug of Bel\u00e9m #29",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Chill"
+  },
+  {
+    "id": 35,
+    "country": "Portugal",
+    "city": "Lisbon",
+    "district": "Bel\u00e9m",
+    "cafe": "Rustic Mug of Bel\u00e9m #30",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Chill"
+  },
+  {
+    "id": 40,
+    "country": "Portugal",
+    "city": "Porto",
+    "district": "Ribeira",
+    "cafe": "Sunny Brew of Ribeira",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Taxed"
+  },
+  {
+    "id": 41,
+    "country": "Portugal",
+    "city": "Porto",
+    "district": "Ribeira",
+    "cafe": "Sunny Brew of Ribeira #1",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Taxed"
+  },
+  {
+    "id": 42,
+    "country": "Portugal",
+    "city": "Porto",
+    "district": "Ribeira",
+    "cafe": "Sunny Brew of Ribeira #79",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Taxed"
+  },
+  {
+    "id": 43,
+    "country": "Portugal",
+    "city": "Porto",
+    "district": "Ribeira",
+    "cafe": "Sunny Brew of Ribeira #71",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Taxed"
+  },
+  {
+    "id": 44,
+    "country": "Portugal",
+    "city": "Porto",
+    "district": "Ribeira",
+    "cafe": "Sunny Brew of Ribeira #28",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Taxed"
+  },
+  {
+    "id": 48,
+    "country": "Portugal",
+    "city": "Porto",
+    "district": "Boavista",
+    "cafe": "Bean Haven of Boavista",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 49,
+    "country": "Portugal",
+    "city": "Porto",
+    "district": "Boavista",
+    "cafe": "Bean Haven of Boavista #56",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 50,
+    "country": "Portugal",
+    "city": "Porto",
+    "district": "Boavista",
+    "cafe": "Bean Haven of Boavista #22",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 51,
+    "country": "Portugal",
+    "city": "Porto",
+    "district": "Boavista",
+    "cafe": "Bean Haven of Boavista #77",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 54,
+    "country": "Portugal",
+    "city": "Porto",
+    "district": "Foz",
+    "cafe": "Cozy Cup of Foz",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Taxed"
+  },
+  {
+    "id": 55,
+    "country": "Portugal",
+    "city": "Porto",
+    "district": "Foz",
+    "cafe": "Cozy Cup of Foz #23",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Taxed"
+  },
+  {
+    "id": 56,
+    "country": "Portugal",
+    "city": "Porto",
+    "district": "Foz",
+    "cafe": "Cozy Cup of Foz #98",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Taxed"
+  },
+  {
+    "id": 59,
+    "country": "France",
+    "city": "Paris",
+    "district": "Montmartre",
+    "cafe": "Bean Haven of Montmartre",
+    "visited": false,
+    "overall": "Fire",
+    "price": "Chill"
+  },
+  {
+    "id": 60,
+    "country": "France",
+    "city": "Paris",
+    "district": "Montmartre",
+    "cafe": "Bean Haven of Montmartre #12",
+    "visited": false,
+    "overall": "Fire",
+    "price": "Chill"
+  },
+  {
+    "id": 61,
+    "country": "France",
+    "city": "Paris",
+    "district": "Montmartre",
+    "cafe": "Bean Haven of Montmartre #49",
+    "visited": false,
+    "overall": "Fire",
+    "price": "Chill"
+  },
+  {
+    "id": 71,
+    "country": "France",
+    "city": "Paris",
+    "district": "Le Marais",
+    "cafe": "Cozy Cup of Le Marais",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 72,
+    "country": "France",
+    "city": "Paris",
+    "district": "Le Marais",
+    "cafe": "Cozy Cup of Le Marais #87",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 73,
+    "country": "France",
+    "city": "Paris",
+    "district": "Le Marais",
+    "cafe": "Cozy Cup of Le Marais #39",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 74,
+    "country": "France",
+    "city": "Paris",
+    "district": "Le Marais",
+    "cafe": "Cozy Cup of Le Marais #31",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 75,
+    "country": "France",
+    "city": "Paris",
+    "district": "Le Marais",
+    "cafe": "Cozy Cup of Le Marais #55",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 76,
+    "country": "France",
+    "city": "Paris",
+    "district": "Le Marais",
+    "cafe": "Cozy Cup of Le Marais #41",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 77,
+    "country": "France",
+    "city": "Paris",
+    "district": "Le Marais",
+    "cafe": "Cozy Cup of Le Marais #23",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 78,
+    "country": "France",
+    "city": "Paris",
+    "district": "Le Marais",
+    "cafe": "Cozy Cup of Le Marais #7",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 79,
+    "country": "France",
+    "city": "Paris",
+    "district": "Le Marais",
+    "cafe": "Cozy Cup of Le Marais #42",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 80,
+    "country": "France",
+    "city": "Paris",
+    "district": "Le Marais",
+    "cafe": "Cozy Cup of Le Marais #60",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 84,
+    "country": "France",
+    "city": "Paris",
+    "district": "Latin Quarter",
+    "cafe": "Bean Haven of Latin Quarter",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Taxed"
+  },
+  {
+    "id": 85,
+    "country": "France",
+    "city": "Paris",
+    "district": "Latin Quarter",
+    "cafe": "Bean Haven of Latin Quarter #32",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Taxed"
+  },
+  {
+    "id": 86,
+    "country": "France",
+    "city": "Paris",
+    "district": "Latin Quarter",
+    "cafe": "Bean Haven of Latin Quarter #35",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Taxed"
+  },
+  {
+    "id": 87,
+    "country": "France",
+    "city": "Paris",
+    "district": "Latin Quarter",
+    "cafe": "Bean Haven of Latin Quarter #32",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Taxed"
+  },
+  {
+    "id": 90,
+    "country": "France",
+    "city": "Nice",
+    "district": "Old Town",
+    "cafe": "Caffeine Spot of Old Town",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Chill"
+  },
+  {
+    "id": 91,
+    "country": "France",
+    "city": "Nice",
+    "district": "Old Town",
+    "cafe": "Caffeine Spot of Old Town #73",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Chill"
+  },
+  {
+    "id": 92,
+    "country": "France",
+    "city": "Nice",
+    "district": "Old Town",
+    "cafe": "Caffeine Spot of Old Town #75",
+    "visited": false,
+    "overall": "Trash",
+    "price": "Chill"
+  },
+  {
+    "id": 102,
+    "country": "France",
+    "city": "Nice",
+    "district": "Cimiez",
+    "cafe": "Cozy Cup of Cimiez",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 103,
+    "country": "France",
+    "city": "Nice",
+    "district": "Cimiez",
+    "cafe": "Cozy Cup of Cimiez #75",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 104,
+    "country": "France",
+    "city": "Nice",
+    "district": "Cimiez",
+    "cafe": "Cozy Cup of Cimiez #79",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 105,
+    "country": "France",
+    "city": "Nice",
+    "district": "Cimiez",
+    "cafe": "Cozy Cup of Cimiez #21",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 106,
+    "country": "France",
+    "city": "Nice",
+    "district": "Cimiez",
+    "cafe": "Cozy Cup of Cimiez #46",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 107,
+    "country": "France",
+    "city": "Nice",
+    "district": "Cimiez",
+    "cafe": "Cozy Cup of Cimiez #58",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 108,
+    "country": "France",
+    "city": "Nice",
+    "district": "Cimiez",
+    "cafe": "Cozy Cup of Cimiez #77",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 109,
+    "country": "France",
+    "city": "Nice",
+    "district": "Cimiez",
+    "cafe": "Cozy Cup of Cimiez #73",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 110,
+    "country": "France",
+    "city": "Nice",
+    "district": "Cimiez",
+    "cafe": "Cozy Cup of Cimiez #37",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 111,
+    "country": "France",
+    "city": "Nice",
+    "district": "Cimiez",
+    "cafe": "Cozy Cup of Cimiez #40",
+    "visited": false,
+    "overall": "Meh",
+    "price": "Steal"
+  },
+  {
+    "id": 114,
+    "country": "France",
+    "city": "Nice",
+    "district": "Promenade",
+    "cafe": "Rustic Mug of Promenade",
+    "visited": false,
+    "overall": "Fire",
+    "price": "Chill"
+  },
+  {
+    "id": 115,
+    "country": "France",
+    "city": "Nice",
+    "district": "Promenade",
+    "cafe": "Rustic Mug of Promenade #84",
+    "visited": false,
+    "overall": "Fire",
+    "price": "Chill"
+  },
+  {
+    "id": 116,
+    "country": "France",
+    "city": "Nice",
+    "district": "Promenade",
+    "cafe": "Rustic Mug of Promenade #89",
+    "visited": false,
+    "overall": "Fire",
+    "price": "Chill"
+  }
+]
