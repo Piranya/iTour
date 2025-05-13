@@ -8,7 +8,6 @@
 import Foundation
 import SwiftData
 import SwiftUI
-
 @Model
 class Cafes: Decodable, Hashable {
     var id: Int

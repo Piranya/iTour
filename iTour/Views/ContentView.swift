@@ -19,26 +19,24 @@ struct ContentView: View {
     @State private var searchText = ""
     
     var body: some View {
-        
-        
         NavigationStack(path: $path){
-            ListCountriesView(sort: sortOrder, searchString: searchText)
+            //renders list from ListCountriesView
+            ListCountriesView()
+            //options for the list
             .navigationTitle("Cafes")
-//                .navigationDestination(for: Cafes.self, destination: EditDestinationView.init)
-                .searchable(text: $searchText)
+//                .searchable(text: $searchText) //adds search bar. Search is ghandled where/how?
                 .toolbar{
                     Button("Add Samples", action: addSamples)
                     Button("Clear Data", action: clearSamples)
-                    Menu("Sort", systemImage: "arrow.up.arrow.down"){
-                        Picker("Sort", selection: $sortOrder){
-                        Text("City")
-                            .tag(SortDescriptor(\Cafes.city))
-                        
+//                    Menu("Sort", systemImage: "arrow.up.arrow.down"){
+//                        Picker("Sort", selection: $sortOrder){
+//                        Text("City")
+//                            .tag(SortDescriptor(\Cafes.city))
 //                        Text("Date")
-//                                .tag(SortDescriptor(\Cafes.))
-                    }
-                    .pickerStyle(.inline)
-                    }
+//                                .tag(SortDescriptor(\Cafes.visitDate))
+//                    }
+//                    .pickerStyle(.inline)
+//                    }
                 }
            
         }
@@ -65,13 +63,10 @@ struct ContentView: View {
         }
 
     }
-    
-
-  
-
 
 }
 
 #Preview {
     ContentView()
+        .modelContainer(for: Cafes.self)
 }

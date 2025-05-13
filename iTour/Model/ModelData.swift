@@ -13,7 +13,7 @@ class ModelData {
 
   
 }
-
+//TODO: move to reusable functions file
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
 
