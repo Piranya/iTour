@@ -19,27 +19,52 @@ struct ContentView: View {
     @State private var searchText = ""
     
     var body: some View {
-        NavigationStack(path: $path){
-            //renders list from ListCountriesView
-            ListCountriesView()
-            //options for the list
-            .navigationTitle("Cafes")
-//                .searchable(text: $searchText) //adds search bar. Search is ghandled where/how?
-                .toolbar{
-                    Button("Add Samples", action: addSamples)
-                    Button("Clear Data", action: clearSamples)
-//                    Menu("Sort", systemImage: "arrow.up.arrow.down"){
-//                        Picker("Sort", selection: $sortOrder){
-//                        Text("City")
-//                            .tag(SortDescriptor(\Cafes.city))
-//                        Text("Date")
-//                                .tag(SortDescriptor(\Cafes.visitDate))
-//                    }
-//                    .pickerStyle(.inline)
-//                    }
+        TabView {
+            Tab("Cafes", systemImage: "house") {
+                NavigationSplitView {
+                    
+                    NavigationStack(path: $path){
+                        //renders list from ListCountriesView
+                        ListCountriesView()
+                        //options for the list
+                            .navigationTitle("Cafes")
+                            .searchable(text: $searchText) //adds search bar.
+                            .toolbar{
+                                Button("Add Samples", action: addSamples)
+                                Button("Clear Data", action: clearSamples)
+                                //                    Menu("Sort", systemImage: "arrow.up.arrow.down"){
+                                //                        Picker("Sort", selection: $sortOrder){
+                                //                        Text("City")
+                                //                            .tag(SortDescriptor(\Cafes.city))
+                                //                        Text("Date")
+                                //                                .tag(SortDescriptor(\Cafes.visitDate))
+                                //                    }
+                                //                    .pickerStyle(.inline)
+                                //                    }
+                            }
+                        
+                    }
+                } detail: {
+                    Text("Select City")
                 }
-           
+               }
+               .badge(2)
+
+               Tab("Sync", systemImage: "tray.and.arrow.up.fill") {
+                   Text("Sync info screen")
+               }
+            
+            Tab("Profile", systemImage: "person.circle") {
+                Spacer()
+                Text("User info screen")
+                Spacer()
+                Button("Logout", action:  {})
+                Spacer()
+            }
+          
         }
+        
+
     }
     
     func clearSamples() {
@@ -61,6 +86,8 @@ struct ContentView: View {
         ModelData().cafes.forEach {
             modelContext.insert($0)
         }
+        
+
 
     }
 

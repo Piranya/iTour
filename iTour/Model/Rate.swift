@@ -1,18 +1,24 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A representation of a hike.
-*/
-
 import Foundation
 
-struct Rate: Codable, Hashable, Identifiable {
-    var id: Int
-    var observations: [Observation]
+struct Ratings: Codable {
+    let overall: [String]
+    let price: [String]
+    let contact: [String]
+}
 
-    struct Observation: Codable, Hashable {
-        var overall: String
-        var price: String
+func loadRatingsFromFile() -> Ratings? {
+    guard let url = Bundle.main.url(forResource: "ratesData", withExtension: "json") else {
+        print("ratesData.json not found.")
+        return nil
+    }
+
+    do {
+        let data = try Data(contentsOf: url)
+        let decoded = try JSONDecoder().decode(Ratings.self, from: data)
+        return decoded
+    } catch {
+        print("Error loading or decoding file: \(error)")
+        return nil
     }
 }
+

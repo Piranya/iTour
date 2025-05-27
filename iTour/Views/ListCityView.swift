@@ -12,23 +12,21 @@ struct ListCityView: View {
  
  
     var body: some View {
-        NavigationView {
+//        List {
             let citiesInCountry = countriesDictionary[selectedCountry] ?? []
             let uniqueCities = Array(Set(citiesInCountry.map { $0.city })).sorted()
             
             //        List {
             ForEach(uniqueCities, id: \.self) { city in
-                //                Text(city)
                 NavigationLink(destination: ListDistrictView(selectedCity: city)) {
                     Text(city)
                 }
                 
             }
             //        }
-            .navigationTitle(selectedCountry)
             
             
-        }
+//        }
     }
  
 }//view

@@ -21,33 +21,50 @@ struct ListCountriesView: View {
     }
 
     var body: some View {
+        
             List {
                 ForEach(countries, id: \.self) { country in
-                    Section {
-                        Button {
-                            isExpanded[country] = !(isExpanded[country] ?? false)
-                        } label: {
+                    DisclosureGroup(
+                        isExpanded: Binding(
+                            get: { isExpanded[country] ?? true },
+                            set: { isExpanded[country] = $0 }
+                        ),
+                        content: {
+                                ListCityView(selectedCountry: country)
+                        },
+                        label: {
                             HStack {
-                                Text(country)
+                                Text("\(country)") 
                                     .font(.headline)
-                                Spacer()
-                                Text("\(cafeCount(for: country)) cafes")
-                                    .foregroundColor(.gray)
+                                
                             }
                         }
+                    )
+                    
 
-                        if isExpanded[country] ?? false {
-
-                            ListCityView(selectedCountry: country)
-                            
-                        }
-                    }
                 }
-            .navigationTitle("Countries")
         }
     }
 }
-
+//                    Section {
+//                        Button {
+//                            isExpanded[country] = !(isExpanded[country] ?? false)
+//                        } label: {
+//                            HStack {
+//                                Text(country)
+//                                    .font(.headline)
+//                                Spacer()
+//                                Text("\(cafeCount(for: country)) cafes")
+//                                    .foregroundColor(.gray)
+//                            }
+//                        }
+//
+//                        if isExpanded[country] ?? false {
+//
+//                            ListCityView(selectedCountry: country)
+//
+//                        }
+//                    }
 #Preview {
     ListCountriesView()
         .modelContainer(for: Cafes.self)
