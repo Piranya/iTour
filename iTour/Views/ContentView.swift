@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  iTour
-//
-//  Created by Nick Tkachenko on 14.11.2024.
-//
-
 import SwiftData
 import SwiftUI
 import Foundation
@@ -28,7 +21,7 @@ struct ContentView: View {
                         ListCountriesView()
                         //options for the list
                             .navigationTitle("Cafes")
-                            .searchable(text: $searchText) //adds search bar.
+//                            .searchable(text: $searchText) //adds search bar.
                             .toolbar{
                                 Button("Add Samples", action: addSamples)
                                 Button("Clear Data", action: clearSamples)
@@ -51,7 +44,8 @@ struct ContentView: View {
                .badge(2)
 
                Tab("Sync", systemImage: "tray.and.arrow.up.fill") {
-                   Text("Sync info screen")
+//                   Text("Sync info screen")
+                   ModifiedCafesListView()
                }
             
             Tab("Profile", systemImage: "person.circle") {
@@ -86,9 +80,6 @@ struct ContentView: View {
         ModelData().cafes.forEach {
             modelContext.insert($0)
         }
-        
-
-
     }
 
 }

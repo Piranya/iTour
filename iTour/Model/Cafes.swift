@@ -12,11 +12,13 @@ class Cafes: Decodable, Hashable {
     var isVisited: Bool = false
     var isLoved: Bool = false
     var isModified: Bool = false
-//    var rateOverall: String
-//    var ratePrice: String
+    var rateOverall: String = ""
+    var ratePrice: String = ""
+    var selectedContact: String = ""
+    var lastModified: Date = nullDate
     
-    init(id: Int, country: String = "", city: String = "", district: String = "", cafe: String = "",  visitDate: Date? = nil, isVisited: Bool = false,isLoved: Bool = false, isModified: Bool = false
-//         , rateOverall: String = "", ratePrice: String = ""
+    
+    init(id: Int, country: String = "", city: String = "", district: String = "", cafe: String = "",  visitDate: Date? = Cafes.nullDate, isVisited: Bool = false, isLoved: Bool = false, isModified: Bool = false, rateOverall: String = "", ratePrice: String = "", selectedContact: String = "", lastModified: Date? = Cafes.nullDate
     ) {
         self.id = id
         self.country = country
@@ -27,8 +29,10 @@ class Cafes: Decodable, Hashable {
         self.isVisited = isVisited
         self.isLoved = isLoved
         self.isModified = isModified
-//        self.rateOverall = rateOverall
-//        self.ratePrice = ratePrice
+        self.rateOverall = rateOverall
+        self.ratePrice = ratePrice
+        self.selectedContact = selectedContact
+        self.lastModified = lastModified ?? Cafes.nullDate
     }
     
     required convenience init(from decoder: Decoder) throws {
@@ -38,12 +42,14 @@ class Cafes: Decodable, Hashable {
         let city = try container.decodeIfPresent(String.self, forKey: .city) ?? ""
         let district = try container.decodeIfPresent(String.self, forKey: .district) ?? ""
         let cafe = try container.decodeIfPresent(String.self, forKey: .cafe) ?? ""
-        let visitDate = try container.decodeIfPresent(Date.self, forKey: .visitDate)
+        let visitDate = try container.decodeIfPresent(Date.self, forKey: .visitDate) ?? Self.nullDate
         let isVisited = try container.decodeIfPresent(Bool.self, forKey: .isVisited) ?? false
         let isLoved = try container.decodeIfPresent(Bool.self, forKey: .isLoved) ?? false
         let isModified = try container.decodeIfPresent(Bool.self, forKey: .isModified) ?? false
-//        let rateOverall = try container.decodeIfPresent(String.self, forKey: .rateOverall) ?? ""
-//        let ratePrice = try container.decodeIfPresent(String.self, forKey: .ratePrice) ?? ""
+        let rateOverall = try container.decodeIfPresent(String.self, forKey: .rateOverall) ?? ""
+        let ratePrice = try container.decodeIfPresent(String.self, forKey: .ratePrice) ?? ""
+        let selectedContact = try container.decodeIfPresent(String.self, forKey: .selectedContact) ?? ""
+        let lastModified = try container.decodeIfPresent(Date.self, forKey: .lastModified) ?? Self.nullDate
         self.init(
             id: id,
             country: country,
@@ -53,14 +59,16 @@ class Cafes: Decodable, Hashable {
             visitDate: visitDate,
             isVisited: isVisited,
             isLoved: isLoved,
-            isModified: isModified
-//            rateOverall: rateOverall,
-//            ratePrice: ratePrice
+            isModified: isModified,
+            rateOverall: rateOverall,
+            ratePrice: ratePrice,
+            selectedContact: selectedContact,
+            lastModified: lastModified
         )
     }
     
     private enum CodingKeys: String, CodingKey {
-        case id, country, city, district, cafe, visitDate, isVisited, isLoved, isModified//, rateOverall, ratePrice
+        case id, country, city, district, cafe, visitDate, isVisited, isLoved, isModified, rateOverall, ratePrice, selectedContact, lastModified
     }
     
     static var nullDate: Date {
@@ -68,4 +76,11 @@ class Cafes: Decodable, Hashable {
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter.date(from: "1900-01-01") ?? Date.distantPast
     }
+    
+    func update<T>(keyPath: ReferenceWritableKeyPath<Cafes, T>, to value: T) {
+         self[keyPath: keyPath] = value
+         lastModified = .now
+         isModified = true
+     }
+    
 }

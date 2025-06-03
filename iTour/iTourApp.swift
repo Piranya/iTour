@@ -17,5 +17,5 @@ struct iTourApp: App {
             ContentView()
                 .modelContainer(for: Cafes.self)
         }
-    }
+    }    
 }

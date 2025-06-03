@@ -9,9 +9,8 @@ import Foundation
 @Observable
 class ModelData {
     var cafes: [Cafes] = load("cafesData.json")
-
-  
 }
+
 //TODO: move to reusable functions file
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
@@ -34,3 +33,5 @@ func load<T: Decodable>(_ filename: String) -> T {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
+
+

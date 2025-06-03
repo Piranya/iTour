@@ -19,6 +19,7 @@
 		013293742DD3A29900DCC602 /* cafesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 013293602DD3A29900DCC602 /* cafesData.json */; };
 		013293752DD3A29900DCC602 /* ratesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 013293612DD3A29900DCC602 /* ratesData.json */; };
 		013293762DD3A29900DCC602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 013293682DD3A29900DCC602 /* Assets.xcassets */; };
+		01DB62E92DEDBB0F00C09E8E /* ModifiedCafesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB62E82DEDBB0F00C09E8E /* ModifiedCafesListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		013293682DD3A29900DCC602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		013293692DD3A29900DCC602 /* iTourApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTourApp.swift; sourceTree = "<group>"; };
 		0199F3A52CE6798B00C7A87F /* iTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01DB62E82DEDBB0F00C09E8E /* ModifiedCafesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedCafesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				013293652DD3A29900DCC602 /* ListCountriesView.swift */,
 				013293642DD3A29900DCC602 /* ListCityView.swift */,
 				013293662DD3A29900DCC602 /* ListDistrictView.swift */,
+				01DB62E82DEDBB0F00C09E8E /* ModifiedCafesListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -89,12 +92,12 @@
 		0132936A2DD3A29900DCC602 /* iTour */ = {
 			isa = PBXGroup;
 			children = (
+				013293692DD3A29900DCC602 /* iTourApp.swift */,
 				013293672DD3A29900DCC602 /* Views */,
 				0132935D2DD3A29900DCC602 /* Model */,
 				013293622DD3A29900DCC602 /* Resources */,
 				0132935F2DD3A29900DCC602 /* Preview Content */,
 				013293682DD3A29900DCC602 /* Assets.xcassets */,
-				013293692DD3A29900DCC602 /* iTourApp.swift */,
 			);
 			path = iTour;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				0132936F2DD3A29900DCC602 /* ListCityView.swift in Sources */,
 				013293702DD3A29900DCC602 /* ListCountriesView.swift in Sources */,
 				013293712DD3A29900DCC602 /* ListDistrictView.swift in Sources */,
+				01DB62E92DEDBB0F00C09E8E /* ModifiedCafesListView.swift in Sources */,
 				013293722DD3A29900DCC602 /* iTourApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

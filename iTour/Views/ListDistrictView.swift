@@ -10,16 +10,12 @@ struct ListDistrictView: View {
     @State private var showSheet = false
     
     var selectedCity: String
-//    @State private var isExpanded: [String: Bool] = [:]
-
     var cafesInCity: [Cafes] {
         cafes.filter { $0.city == selectedCity }
     }
-
     var groupedByDistrict: [String: [Cafes]] {
         Dictionary(grouping: cafesInCity, by: { $0.district })
     }
-    
     
     var body: some View {
      
@@ -39,7 +35,15 @@ struct ListDistrictView: View {
                             HStack {
                                 Toggle(isOn:  Binding(
                                  get: { cafe.isVisited },
-                                 set: { cafe.isVisited = $0 }
+                                 set: { newValue in
+                                        cafe.update(keyPath: \.isVisited, to: newValue)
+                                         if newValue == true {
+                                             cafe.update(keyPath: \.visitDate, to: .now)
+                                         } else {
+                                             cafe.update(keyPath: \.visitDate, to: Cafes.nullDate)
+                                         }
+                                      }
+                                 
                                 )){
                                     Text(cafe.cafe)
                                         .onTapGesture {
@@ -66,14 +70,21 @@ struct ListDistrictView: View {
             }
         }
         .navigationTitle("\(selectedCity) districts")
-        .sheet(isPresented: $showSheet) {
+//        .sheet(isPresented: $showSheet) {
+//            if let cafe = selectedCafe {
+//                  CafeDetailSheet(cafe: cafe)
+//                    .presentationDetents([.large])
+//                      .presentationBackground(.regularMaterial)
+//                      .presentationDragIndicator(.visible)
+//              }
+//        }
+        .inspector(isPresented: $showSheet) {
             if let cafe = selectedCafe {
-                CafeDetailSheet(cafe: cafe)
-                    .presentationDetents([.medium, .large])
-                    .presentationBackgroundInteraction(.automatic)
-                    .presentationBackground(.regularMaterial)
-                    .presentationDragIndicator(.visible)
-            }
+                  CafeDetailSheet(cafe: cafe)
+                    .presentationDetents([.large])
+                      .presentationBackground(.regularMaterial)
+                      .presentationDragIndicator(.visible)
+              }
         }
     }
     
@@ -81,28 +92,42 @@ struct ListDistrictView: View {
 }
 
 struct CafeDetailSheet: View {
-    let cafe: Cafes
-    @State private var selectedOverall = "Fire"
-    @State private var selectedPrice = "Steal"
-    @State private var selectedContact = ""
-    
+    @Bindable var cafe: Cafes
     let ratings = loadRatingsFromFile()
 
     var body: some View {
+       
         List{
             VStack(spacing: 10) {
                 Spacer()
                 Text("\(cafe.cafe)")
                     .font(.title)
                 Spacer()
-                DatePicker(selection: .constant(Date()), label: { Text("Visit Date") })
-                //TODO: bind to cafe.visitdate
+                DatePicker(selection:
+                           Binding<Date>(
+                            get: { if cafe.visitDate != Cafes.nullDate {
+                                cafe.visitDate
+                            } else {
+                                .now
+                            }
+                            },
+                              set: { newValue in
+                                  cafe.update(keyPath: \.visitDate, to: newValue)
+                              }
+                          )
+                           , label: { Text("Visit Date") })
                 
                 VStack(spacing: 30) {
                     VStack {
                         Text("Overall Rating")
                             .font(.headline)
-                        Picker("Overall", selection: $selectedOverall) {
+                        Picker("Overall", selection: Binding<String>(
+                            get: { cafe.rateOverall },
+                            set: { newValue in
+                                cafe.update(keyPath: \.rateOverall, to: newValue)
+                            }
+                        ))
+                            {
                             ForEach(ratings?.overall ?? [], id: \.self) { option in
                                 Text(option).tag(option)
                             }
@@ -112,7 +137,12 @@ struct CafeDetailSheet: View {
                     VStack {
                         Text("Price Rating")
                             .font(.headline)
-                        Picker("Price", selection: $selectedPrice) {
+                        Picker("Price", selection: Binding<String>(
+                            get: { cafe.ratePrice },
+                            set: { newValue in
+                                cafe.update(keyPath: \.ratePrice, to: newValue)
+                            }
+                        )) {
                             ForEach(ratings?.price ?? [], id: \.self) { option in
                                 Text(option).tag(option)
                             }
@@ -122,7 +152,13 @@ struct CafeDetailSheet: View {
                     VStack {
                         Text("Contact Person")
                             .font(.headline)
-                        Picker("Contact", selection: $selectedContact) {
+                        Picker("Contact", selection: Binding<String>(
+                                   get: { cafe.selectedContact },
+                                   set: { newValue in
+                                       cafe.update(keyPath: \.selectedContact, to: newValue)
+                                   }
+                               ))
+                            {
                             ForEach(ratings?.contact ?? [], id: \.self) { option in
                                 Text(option).tag(option)
                             }
