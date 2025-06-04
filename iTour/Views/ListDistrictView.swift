@@ -70,14 +70,6 @@ struct ListDistrictView: View {
             }
         }
         .navigationTitle("\(selectedCity) districts")
-//        .sheet(isPresented: $showSheet) {
-//            if let cafe = selectedCafe {
-//                  CafeDetailSheet(cafe: cafe)
-//                    .presentationDetents([.large])
-//                      .presentationBackground(.regularMaterial)
-//                      .presentationDragIndicator(.visible)
-//              }
-//        }
         .inspector(isPresented: $showSheet) {
             if let cafe = selectedCafe {
                   CafeDetailSheet(cafe: cafe)

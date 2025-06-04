@@ -6,17 +6,41 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		01DB631C2DEF3C0800C09E8E /* Cafes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB630A2DEF3C0800C09E8E /* Cafes.swift */; };
+		01DB631D2DEF3C0800C09E8E /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB630B2DEF3C0800C09E8E /* ModelData.swift */; };
+		01DB631E2DEF3C0800C09E8E /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB630C2DEF3C0800C09E8E /* Rate.swift */; };
+		01DB631F2DEF3C0800C09E8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB63132DEF3C0800C09E8E /* ContentView.swift */; };
+		01DB63202DEF3C0800C09E8E /* ListCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB63142DEF3C0800C09E8E /* ListCityView.swift */; };
+		01DB63212DEF3C0800C09E8E /* ListCountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB63152DEF3C0800C09E8E /* ListCountriesView.swift */; };
+		01DB63222DEF3C0800C09E8E /* ListDistrictView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB63162DEF3C0800C09E8E /* ListDistrictView.swift */; };
+		01DB63232DEF3C0800C09E8E /* ModifiedCafesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB63172DEF3C0800C09E8E /* ModifiedCafesListView.swift */; };
+		01DB63242DEF3C0800C09E8E /* iTourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB631A2DEF3C0800C09E8E /* iTourApp.swift */; };
+		01DB63252DEF3C0800C09E8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DB630E2DEF3C0800C09E8E /* Preview Assets.xcassets */; };
+		01DB63262DEF3C0800C09E8E /* cafesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 01DB63102DEF3C0800C09E8E /* cafesData.json */; };
+		01DB63272DEF3C0800C09E8E /* ratesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 01DB63112DEF3C0800C09E8E /* ratesData.json */; };
+		01DB63282DEF3C0800C09E8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DB63192DEF3C0800C09E8E /* Assets.xcassets */; };
+		01DB632B2DF098DF00C09E8E /* SendJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB632A2DF098D500C09E8E /* SendJSON.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		0199F3A52CE6798B00C7A87F /* iTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01DB630A2DEF3C0800C09E8E /* Cafes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafes.swift; sourceTree = "<group>"; };
+		01DB630B2DEF3C0800C09E8E /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		01DB630C2DEF3C0800C09E8E /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		01DB630E2DEF3C0800C09E8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		01DB63102DEF3C0800C09E8E /* cafesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cafesData.json; sourceTree = "<group>"; };
+		01DB63112DEF3C0800C09E8E /* ratesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ratesData.json; sourceTree = "<group>"; };
+		01DB63132DEF3C0800C09E8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		01DB63142DEF3C0800C09E8E /* ListCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCityView.swift; sourceTree = "<group>"; };
+		01DB63152DEF3C0800C09E8E /* ListCountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCountriesView.swift; sourceTree = "<group>"; };
+		01DB63162DEF3C0800C09E8E /* ListDistrictView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDistrictView.swift; sourceTree = "<group>"; };
+		01DB63172DEF3C0800C09E8E /* ModifiedCafesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedCafesListView.swift; sourceTree = "<group>"; };
+		01DB63192DEF3C0800C09E8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01DB631A2DEF3C0800C09E8E /* iTourApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTourApp.swift; sourceTree = "<group>"; };
+		01DB63292DEF3D8E00C09E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		01DB632A2DF098D500C09E8E /* SendJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		0199F3A72CE6798B00C7A87F /* iTour */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iTour;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0199F3A22CE6798B00C7A87F /* Frameworks */ = {
@@ -32,7 +56,7 @@
 		0199F39C2CE6798B00C7A87F = {
 			isa = PBXGroup;
 			children = (
-				0199F3A72CE6798B00C7A87F /* iTour */,
+				01DB631B2DEF3C0800C09E8E /* iTour */,
 				0199F3A62CE6798B00C7A87F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +67,60 @@
 				0199F3A52CE6798B00C7A87F /* iTour.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		01DB630D2DEF3C0800C09E8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01DB630A2DEF3C0800C09E8E /* Cafes.swift */,
+				01DB630B2DEF3C0800C09E8E /* ModelData.swift */,
+				01DB630C2DEF3C0800C09E8E /* Rate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		01DB630F2DEF3C0800C09E8E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				01DB630E2DEF3C0800C09E8E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		01DB63122DEF3C0800C09E8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				01DB63102DEF3C0800C09E8E /* cafesData.json */,
+				01DB63112DEF3C0800C09E8E /* ratesData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		01DB63182DEF3C0800C09E8E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01DB632A2DF098D500C09E8E /* SendJSON.swift */,
+				01DB63132DEF3C0800C09E8E /* ContentView.swift */,
+				01DB63142DEF3C0800C09E8E /* ListCityView.swift */,
+				01DB63152DEF3C0800C09E8E /* ListCountriesView.swift */,
+				01DB63162DEF3C0800C09E8E /* ListDistrictView.swift */,
+				01DB63172DEF3C0800C09E8E /* ModifiedCafesListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		01DB631B2DEF3C0800C09E8E /* iTour */ = {
+			isa = PBXGroup;
+			children = (
+				01DB63292DEF3D8E00C09E8E /* Info.plist */,
+				01DB631A2DEF3C0800C09E8E /* iTourApp.swift */,
+				01DB63182DEF3C0800C09E8E /* Views */,
+				01DB630D2DEF3C0800C09E8E /* Model */,
+				01DB63122DEF3C0800C09E8E /* Resources */,
+				01DB630F2DEF3C0800C09E8E /* Preview Content */,
+				01DB63192DEF3C0800C09E8E /* Assets.xcassets */,
+			);
+			path = iTour;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +137,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				0199F3A72CE6798B00C7A87F /* iTour */,
 			);
 			name = iTour;
 			packageProductDependencies = (
@@ -109,6 +184,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01DB63252DEF3C0800C09E8E /* Preview Assets.xcassets in Resources */,
+				01DB63262DEF3C0800C09E8E /* cafesData.json in Resources */,
+				01DB63272DEF3C0800C09E8E /* ratesData.json in Resources */,
+				01DB63282DEF3C0800C09E8E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +198,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01DB631C2DEF3C0800C09E8E /* Cafes.swift in Sources */,
+				01DB631D2DEF3C0800C09E8E /* ModelData.swift in Sources */,
+				01DB631E2DEF3C0800C09E8E /* Rate.swift in Sources */,
+				01DB632B2DF098DF00C09E8E /* SendJSON.swift in Sources */,
+				01DB631F2DEF3C0800C09E8E /* ContentView.swift in Sources */,
+				01DB63202DEF3C0800C09E8E /* ListCityView.swift in Sources */,
+				01DB63212DEF3C0800C09E8E /* ListCountriesView.swift in Sources */,
+				01DB63222DEF3C0800C09E8E /* ListDistrictView.swift in Sources */,
+				01DB63232DEF3C0800C09E8E /* ModifiedCafesListView.swift in Sources */,
+				01DB63242DEF3C0800C09E8E /* iTourApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +345,7 @@
 				DEVELOPMENT_TEAM = F49B75DC96;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iTour/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,6 +378,7 @@
 				DEVELOPMENT_TEAM = F49B75DC96;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iTour/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

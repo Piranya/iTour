@@ -2,13 +2,13 @@ import Foundation
 import SwiftData
 import SwiftUI
 @Model
-class Cafes: Decodable, Hashable {
-    var id: Int
-    var country: String
-    var city: String
-    var district: String
-    var cafe: String
-    var visitDate: Date
+class Cafes: Codable, Hashable {
+    var id: Int = 0
+    var country: String = ""
+    var city: String = ""
+    var district: String = ""
+    var cafe: String = ""
+    var visitDate: Date = nullDate
     var isVisited: Bool = false
     var isLoved: Bool = false
     var isModified: Bool = false
@@ -66,6 +66,23 @@ class Cafes: Decodable, Hashable {
             lastModified: lastModified
         )
     }
+    
+    func encode(to encoder: Encoder) throws {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+
+            try container.encode(id, forKey: .id)
+            try container.encode(country, forKey: .country)
+            try container.encode(city, forKey: .city)
+            try container.encode(district, forKey: .district)
+            try container.encode(cafe, forKey: .cafe)
+            try container.encode(visitDate, forKey: .visitDate)
+            try container.encode(isVisited, forKey: .isVisited)
+            try container.encode(isLoved, forKey: .isLoved)
+            try container.encode(isModified, forKey: .isModified)
+            try container.encode(rateOverall, forKey: .rateOverall)
+            try container.encode(ratePrice, forKey: .ratePrice)
+            try container.encode(selectedContact, forKey: .selectedContact)
+        }
     
     private enum CodingKeys: String, CodingKey {
         case id, country, city, district, cafe, visitDate, isVisited, isLoved, isModified, rateOverall, ratePrice, selectedContact, lastModified

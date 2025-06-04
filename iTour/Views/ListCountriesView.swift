@@ -2,7 +2,6 @@ import SwiftUI
 import SwiftData
 
 struct ListCountriesView: View {
-//    @Environment(\.modelContext) var modelContext
     @Query var cafes: [Cafes]
     @State private var isExpanded: [String: Bool] = [:]
 
@@ -46,25 +45,7 @@ struct ListCountriesView: View {
         }
     }
 }
-//                    Section {
-//                        Button {
-//                            isExpanded[country] = !(isExpanded[country] ?? false)
-//                        } label: {
-//                            HStack {
-//                                Text(country)
-//                                    .font(.headline)
-//                                Spacer()
-//                                Text("\(cafeCount(for: country)) cafes")
-//                                    .foregroundColor(.gray)
-//                            }
-//                        }
-//
-//                        if isExpanded[country] ?? false {
-//
-//                            ListCityView(selectedCountry: country)
-//
-//                        }
-//                    }
+
 #Preview {
     ListCountriesView()
         .modelContainer(for: Cafes.self)

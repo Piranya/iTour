@@ -71,7 +71,9 @@ struct ModifiedCafesListView: View {
 
             .toolbar{
                 Menu("Sync Actions") {
-                    Button("Send data to Server", action: {})
+                    Button("Send data to Server", action: {
+                        sendCafesToAPI(cafes: modifiedCafes)
+                    })
                     Button("Get data from Server", action: {})
                     Menu("Reset") {
                         Button("Reset all local changes", action: {})
