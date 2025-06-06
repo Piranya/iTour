@@ -3,6 +3,7 @@ import SwiftUI
 import Foundation
 
 struct ContentView: View {
+    @EnvironmentObject var vm: UserStateViewModel
     @Environment(\.modelContext) var modelContext
   //  @Query(sort: \Task.lotNumber ) var destinations: [Destination]
 //    @Query(sort:[SortDescriptor(\Task.lotNumber, order: .reverse),SortDescriptor(\Task.TaskCategoryOrder, order: .forward),SortDescriptor(\Task.name, order: .forward)] ) var tasks: [Task]
@@ -49,11 +50,12 @@ struct ContentView: View {
                }
             
             Tab("Profile", systemImage: "person.circle") {
-                Spacer()
-                Text("User info screen")
-                Spacer()
-                Button("Logout", action:  {})
-                Spacer()
+                LoginView()
+//                Spacer()
+//                Text("User info screen")
+//                Spacer()
+//                Button("Logout", action:  {})
+//                Spacer()
             }
           
         }

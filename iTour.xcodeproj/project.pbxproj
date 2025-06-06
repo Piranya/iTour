@@ -21,6 +21,11 @@
 		01DB63272DEF3C0800C09E8E /* ratesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 01DB63112DEF3C0800C09E8E /* ratesData.json */; };
 		01DB63282DEF3C0800C09E8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DB63192DEF3C0800C09E8E /* Assets.xcassets */; };
 		01DB632B2DF098DF00C09E8E /* SendJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB632A2DF098D500C09E8E /* SendJSON.swift */; };
+		01DB63332DF1FDB100C09E8E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB63312DF1FDB100C09E8E /* LoginView.swift */; };
+		01DB63352DF1FDB100C09E8E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB63322DF1FDB100C09E8E /* Profile.swift */; };
+		01DB63382DF20EF200C09E8E /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 01DB63372DF20EF200C09E8E /* Auth0 */; };
+		01DB633E2DF2106700C09E8E /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01DB633D2DF2106700C09E8E /* Auth0.plist */; };
+		01DB63402DF312C500C09E8E /* UserStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB633F2DF312BD00C09E8E /* UserStateViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,10 @@
 		01DB631A2DEF3C0800C09E8E /* iTourApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTourApp.swift; sourceTree = "<group>"; };
 		01DB63292DEF3D8E00C09E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		01DB632A2DF098D500C09E8E /* SendJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendJSON.swift; sourceTree = "<group>"; };
+		01DB63312DF1FDB100C09E8E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		01DB63322DF1FDB100C09E8E /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		01DB633D2DF2106700C09E8E /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		01DB633F2DF312BD00C09E8E /* UserStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01DB63382DF20EF200C09E8E /* Auth0 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +109,6 @@
 		01DB63182DEF3C0800C09E8E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				01DB632A2DF098D500C09E8E /* SendJSON.swift */,
 				01DB63132DEF3C0800C09E8E /* ContentView.swift */,
 				01DB63142DEF3C0800C09E8E /* ListCityView.swift */,
 				01DB63152DEF3C0800C09E8E /* ListCountriesView.swift */,
@@ -113,14 +122,35 @@
 			isa = PBXGroup;
 			children = (
 				01DB63292DEF3D8E00C09E8E /* Info.plist */,
+				01DB633D2DF2106700C09E8E /* Auth0.plist */,
 				01DB631A2DEF3C0800C09E8E /* iTourApp.swift */,
 				01DB63182DEF3C0800C09E8E /* Views */,
 				01DB630D2DEF3C0800C09E8E /* Model */,
+				01DB632E2DF1D86900C09E8E /* Sync */,
+				01DB632F2DF1FDA600C09E8E /* Login */,
 				01DB63122DEF3C0800C09E8E /* Resources */,
 				01DB630F2DEF3C0800C09E8E /* Preview Content */,
 				01DB63192DEF3C0800C09E8E /* Assets.xcassets */,
 			);
 			path = iTour;
+			sourceTree = "<group>";
+		};
+		01DB632E2DF1D86900C09E8E /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				01DB632A2DF098D500C09E8E /* SendJSON.swift */,
+			);
+			path = Sync;
+			sourceTree = "<group>";
+		};
+		01DB632F2DF1FDA600C09E8E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				01DB633F2DF312BD00C09E8E /* UserStateViewModel.swift */,
+				01DB63312DF1FDB100C09E8E /* LoginView.swift */,
+				01DB63322DF1FDB100C09E8E /* Profile.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +170,7 @@
 			);
 			name = iTour;
 			packageProductDependencies = (
+				01DB63372DF20EF200C09E8E /* Auth0 */,
 			);
 			productName = iTour;
 			productReference = 0199F3A52CE6798B00C7A87F /* iTour.app */;
@@ -169,6 +200,9 @@
 			);
 			mainGroup = 0199F39C2CE6798B00C7A87F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				01DB63362DF20EF200C09E8E /* XCRemoteSwiftPackageReference "Auth0" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0199F3A62CE6798B00C7A87F /* Products */;
 			projectDirPath = "";
@@ -184,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01DB633E2DF2106700C09E8E /* Auth0.plist in Resources */,
 				01DB63252DEF3C0800C09E8E /* Preview Assets.xcassets in Resources */,
 				01DB63262DEF3C0800C09E8E /* cafesData.json in Resources */,
 				01DB63272DEF3C0800C09E8E /* ratesData.json in Resources */,
@@ -199,9 +234,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				01DB631C2DEF3C0800C09E8E /* Cafes.swift in Sources */,
+				01DB63402DF312C500C09E8E /* UserStateViewModel.swift in Sources */,
 				01DB631D2DEF3C0800C09E8E /* ModelData.swift in Sources */,
 				01DB631E2DEF3C0800C09E8E /* Rate.swift in Sources */,
 				01DB632B2DF098DF00C09E8E /* SendJSON.swift in Sources */,
+				01DB63332DF1FDB100C09E8E /* LoginView.swift in Sources */,
+				01DB63352DF1FDB100C09E8E /* Profile.swift in Sources */,
 				01DB631F2DEF3C0800C09E8E /* ContentView.swift in Sources */,
 				01DB63202DEF3C0800C09E8E /* ListCityView.swift in Sources */,
 				01DB63212DEF3C0800C09E8E /* ListCountriesView.swift in Sources */,
@@ -421,6 +459,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		01DB63362DF20EF200C09E8E /* XCRemoteSwiftPackageReference "Auth0" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/Auth0.swift";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01DB63372DF20EF200C09E8E /* Auth0 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01DB63362DF20EF200C09E8E /* XCRemoteSwiftPackageReference "Auth0" */;
+			productName = Auth0;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0199F39D2CE6798B00C7A87F /* Project object */;
 }
